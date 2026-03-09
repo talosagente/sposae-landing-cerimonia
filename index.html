@@ -16,7 +16,6 @@
       --white: #ffffff;
       --cream: #faf8f5;
       --gold: #c9a96e;
-      --gold-light: #e8d5b0;
       --gray: #6b6b6b;
       --gray-light: #f5f3f0;
       --gray-border: #e0ddd8;
@@ -37,9 +36,7 @@
     /* ─── NAVBAR ─── */
     .navbar {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       z-index: 100;
       background: rgba(255,255,255,0.97);
       backdrop-filter: blur(10px);
@@ -73,15 +70,8 @@
       grid-template-columns: 1fr 1fr;
       min-height: calc(100vh - 60px);
     }
-    .hero-image {
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    .hero-image { position: relative; overflow: hidden; }
+    .hero-image img { width: 100%; height: 100%; object-fit: cover; }
     .hero-content {
       display: flex;
       flex-direction: column;
@@ -103,7 +93,6 @@
       font-weight: 300;
       line-height: 1.15;
       margin-bottom: 24px;
-      color: var(--black);
     }
     .hero-subtitle {
       font-size: 15px;
@@ -128,52 +117,41 @@
     }
     .btn-primary:hover { background: var(--gold); color: var(--black); }
 
-    /* ─── OCCASIONS NAV ─── */
-    .occasions-nav {
-      background: var(--white);
-      padding: 60px 40px 0;
+    /* ─── OCCASIONS STRIP ─── */
+    .occasions-strip {
+      background: var(--black);
+      color: var(--white);
       text-align: center;
+      padding: 48px 20px;
     }
-    .occasions-nav h2 {
-      font-family: var(--serif);
-      font-size: 14px;
+    .occasions-strip p {
+      font-size: 12px;
       font-weight: 500;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--gray);
-      margin-bottom: 32px;
+      opacity: 0.6;
+      margin-bottom: 20px;
     }
-    .occasion-tabs {
+    .occasions-tags {
       display: flex;
       justify-content: center;
-      gap: 0;
-      border-bottom: 1px solid var(--gray-border);
+      flex-wrap: wrap;
+      gap: 12px;
     }
-    .occasion-tab {
-      padding: 16px 40px;
-      font-size: 13px;
+    .occasion-tag {
+      padding: 10px 28px;
+      border: 1px solid rgba(255,255,255,0.3);
+      font-size: 12px;
       font-weight: 500;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--gray);
-      cursor: pointer;
-      border-bottom: 2px solid transparent;
-      transition: all 0.3s;
-      background: none;
-      border-top: none;
-      border-left: none;
-      border-right: none;
+      color: var(--white);
       font-family: var(--sans);
-    }
-    .occasion-tab:hover,
-    .occasion-tab.active {
-      color: var(--black);
-      border-bottom-color: var(--black);
     }
 
     /* ─── PRODUCTS ─── */
     .products-section {
-      padding: 60px 40px 80px;
+      padding: 80px 40px;
       background: var(--white);
     }
     .section-header {
@@ -190,10 +168,13 @@
       font-size: 14px;
       color: var(--gray);
       font-weight: 300;
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
     }
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 32px;
       max-width: 1200px;
       margin: 0 auto;
@@ -212,8 +193,7 @@
       background: var(--gray-light);
     }
     .product-card-image img {
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       object-fit: cover;
       transition: transform 0.5s;
     }
@@ -231,24 +211,21 @@
       color: var(--gold);
     }
 
-    /* Hidden occasion panels */
-    .occasion-panel { display: none; }
-    .occasion-panel.active { display: block; }
-
     /* ─── LOCATIONS ─── */
     .locations-bar {
-      background: var(--black);
-      color: var(--white);
+      background: var(--cream);
       text-align: center;
       padding: 40px 20px;
+      border-top: 1px solid var(--gray-border);
+      border-bottom: 1px solid var(--gray-border);
     }
     .locations-bar p {
       font-size: 12px;
       font-weight: 500;
       letter-spacing: 3px;
       text-transform: uppercase;
+      color: var(--gray);
       margin-bottom: 8px;
-      opacity: 0.7;
     }
     .locations-bar h3 {
       font-family: var(--serif);
@@ -259,9 +236,8 @@
     /* ─── HOW IT WORKS ─── */
     .how-it-works {
       padding: 100px 40px;
-      background: var(--cream);
+      background: var(--white);
     }
-    .how-it-works .section-header { margin-bottom: 60px; }
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -270,7 +246,7 @@
       margin: 0 auto;
     }
     .step-card {
-      background: var(--white);
+      background: var(--cream);
       padding: 48px 36px;
       text-align: center;
       border: 1px solid var(--gray-border);
@@ -302,7 +278,7 @@
     /* ─── TESTIMONIALS ─── */
     .testimonials {
       padding: 100px 40px;
-      background: var(--white);
+      background: var(--cream);
     }
     .testimonials-grid {
       display: grid;
@@ -314,7 +290,7 @@
     .testimonial-card {
       padding: 40px 32px;
       border: 1px solid var(--gray-border);
-      position: relative;
+      background: var(--white);
     }
     .testimonial-stars {
       color: var(--gold);
@@ -337,10 +313,10 @@
       text-transform: uppercase;
     }
 
-    /* ─── URGENCY + BOOKING ─── */
+    /* ─── BOOKING ─── */
     .booking-section {
       padding: 100px 40px;
-      background: var(--cream);
+      background: var(--white);
     }
     .booking-inner {
       max-width: 900px;
@@ -392,10 +368,7 @@
       transition: all 0.3s;
       background: var(--white);
     }
-    .atelier-card:hover {
-      background: var(--black);
-      color: var(--white);
-    }
+    .atelier-card:hover { background: var(--black); color: var(--white); }
     .atelier-card h3 {
       font-family: var(--serif);
       font-size: 28px;
@@ -425,34 +398,22 @@
     @media (max-width: 768px) {
       .navbar { padding: 10px 20px; }
       .navbar-cta { padding: 8px 16px; font-size: 10px; letter-spacing: 1.5px; }
-
-      .hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-image { height: 60vh; }
       .hero-content { padding: 40px 24px; }
       .hero-title { font-size: 36px; }
-      .hero-subtitle { font-size: 14px; }
-
-      .occasion-tabs { flex-wrap: wrap; }
-      .occasion-tab { padding: 12px 20px; font-size: 11px; }
-
-      .products-section { padding: 40px 20px 60px; }
+      .products-section { padding: 60px 20px; }
       .products-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
       .product-card h3 { font-size: 18px; }
-
       .steps-grid { grid-template-columns: 1fr; gap: 20px; }
-      .step-card { padding: 32px 24px; }
-
       .testimonials { padding: 60px 20px; }
       .testimonials-grid { grid-template-columns: 1fr; }
-
       .booking-section { padding: 60px 20px; }
       .booking-inner h2 { font-size: 32px; }
       .atelier-cards { grid-template-columns: 1fr; }
-
       .section-header h2 { font-size: 32px; }
+      .occasions-tags { gap: 8px; }
+      .occasion-tag { padding: 8px 18px; font-size: 11px; }
     }
 
     /* ─── ANIMATIONS ─── */
@@ -461,10 +422,7 @@
       transform: translateY(24px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body>
@@ -494,168 +452,66 @@
     </div>
   </section>
 
-  <!-- OCCASION TABS -->
-  <div class="occasions-nav">
-    <h2>Scegli la tua occasione</h2>
-    <div class="occasion-tabs">
-      <button class="occasion-tab active" data-target="diciottesimo">Diciottesimo</button>
-      <button class="occasion-tab" data-target="laurea">Laurea</button>
-      <button class="occasion-tab" data-target="cerimonia">Cerimonia</button>
-      <button class="occasion-tab" data-target="sera">Sera & Gala</button>
+  <!-- OCCASIONS -->
+  <div class="occasions-strip">
+    <p>L'abito giusto per ogni occasione</p>
+    <div class="occasions-tags">
+      <span class="occasion-tag">Diciottesimo</span>
+      <span class="occasion-tag">Laurea</span>
+      <span class="occasion-tag">Cerimonia</span>
+      <span class="occasion-tag">Sera & Gala</span>
+      <span class="occasion-tag">Comunione</span>
     </div>
   </div>
 
   <!-- PRODUCTS -->
   <section class="products-section">
-
-    <!-- DICIOTTESIMO -->
-    <div class="occasion-panel active" id="diciottesimo">
-      <div class="section-header fade-in">
-        <h2>Diciottesimo</h2>
-        <p>Brilla nel giorno che segna il tuo nuovo inizio</p>
+    <div class="section-header fade-in">
+      <h2>I Nostri Modelli</h2>
+      <p>Linee moderne, dettagli ricercati e tessuti pregiati. 
+         Che sia il tuo diciottesimo, una laurea o una serata speciale, 
+         troverai l'abito perfetto per brillare.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card fade-in">
+        <div class="product-card-image">
+          <img src="images/vega.png" alt="Vega" loading="lazy">
+        </div>
+        <h3>Vega</h3>
+        <span class="price">150€</span>
       </div>
-      <div class="products-grid">
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/vega.png" alt="Vega" loading="lazy">
-          </div>
-          <h3>Vega</h3>
-          <span class="price">150€</span>
+      <div class="product-card fade-in">
+        <div class="product-card-image">
+          <img src="images/perla.png" alt="Perla" loading="lazy">
         </div>
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/perla.png" alt="Perla" loading="lazy">
-          </div>
-          <h3>Perla</h3>
-          <span class="price">180€</span>
+        <h3>Perla</h3>
+        <span class="price">180€</span>
+      </div>
+      <div class="product-card fade-in">
+        <div class="product-card-image">
+          <img src="images/nora.png" alt="Nora" loading="lazy">
         </div>
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/nora.png" alt="Nora" loading="lazy">
-          </div>
-          <h3>Nora</h3>
-          <span class="price">180€</span>
+        <h3>Nora</h3>
+        <span class="price">180€</span>
+      </div>
+      <div class="product-card fade-in">
+        <div class="product-card-image">
+          <img src="images/juliet.png" alt="Juliet" loading="lazy">
         </div>
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/juliet.png" alt="Juliet" loading="lazy">
-          </div>
-          <h3>Juliet</h3>
-          <span class="price">195€</span>
+        <h3>Juliet</h3>
+        <span class="price">195€</span>
+      </div>
+      <div class="product-card fade-in">
+        <div class="product-card-image">
+          <img src="images/dominga.png" alt="Dominga" loading="lazy">
         </div>
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/dominga.png" alt="Dominga" loading="lazy">
-          </div>
-          <h3>Dominga</h3>
-          <span class="price">180€</span>
-        </div>
+        <h3>Dominga</h3>
+        <span class="price">180€</span>
       </div>
     </div>
-
-    <!-- LAUREA -->
-    <div class="occasion-panel" id="laurea">
-      <div class="section-header fade-in">
-        <h2>Laurea</h2>
-        <p>Il giorno della tua laurea, vestiti come lo meriti</p>
-      </div>
-      <div class="products-grid">
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/nora.png" alt="Nora" loading="lazy">
-          </div>
-          <h3>Nora</h3>
-          <span class="price">180€</span>
-        </div>
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/juliet.png" alt="Juliet" loading="lazy">
-          </div>
-          <h3>Juliet</h3>
-          <span class="price">195€</span>
-        </div>
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/vega.png" alt="Vega" loading="lazy">
-          </div>
-          <h3>Vega</h3>
-          <span class="price">150€</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- CERIMONIA -->
-    <div class="occasion-panel" id="cerimonia">
-      <div class="section-header fade-in">
-        <h2>Cerimonia</h2>
-        <p>Invitata, testimone, mamma della sposa — sempre impeccabile</p>
-      </div>
-      <div class="products-grid">
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/perla.png" alt="Perla" loading="lazy">
-          </div>
-          <h3>Perla</h3>
-          <span class="price">180€</span>
-        </div>
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/dominga.png" alt="Dominga" loading="lazy">
-          </div>
-          <h3>Dominga</h3>
-          <span class="price">180€</span>
-        </div>
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/juliet.png" alt="Juliet" loading="lazy">
-          </div>
-          <h3>Juliet</h3>
-          <span class="price">195€</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- SERA & GALA -->
-    <div class="occasion-panel" id="sera">
-      <div class="section-header fade-in">
-        <h2>Sera & Gala</h2>
-        <p>Per le serate che richiedono qualcosa di speciale</p>
-      </div>
-      <div class="products-grid">
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/vega.png" alt="Vega" loading="lazy">
-          </div>
-          <h3>Vega</h3>
-          <span class="price">150€</span>
-        </div>
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/perla.png" alt="Perla" loading="lazy">
-          </div>
-          <h3>Perla</h3>
-          <span class="price">180€</span>
-        </div>
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/nora.png" alt="Nora" loading="lazy">
-          </div>
-          <h3>Nora</h3>
-          <span class="price">180€</span>
-        </div>
-        <div class="product-card fade-in">
-          <div class="product-card-image">
-            <img src="images/dominga.png" alt="Dominga" loading="lazy">
-          </div>
-          <h3>Dominga</h3>
-          <span class="price">180€</span>
-        </div>
-      </div>
-    </div>
-
   </section>
 
-  <!-- LOCATIONS BAR -->
+  <!-- LOCATIONS -->
   <div class="locations-bar">
     <p>Gli abiti da cerimonia sono disponibili da Sposae a</p>
     <h3>Roma e Lissone</h3>
@@ -735,36 +591,14 @@
   </footer>
 
   <script>
-    // Navbar scroll effect
     window.addEventListener('scroll', () => {
       document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
     });
-
-    // Occasion tabs
-    document.querySelectorAll('.occasion-tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.occasion-tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.occasion-panel').forEach(p => p.classList.remove('active'));
-        tab.classList.add('active');
-        const panel = document.getElementById(tab.dataset.target);
-        panel.classList.add('active');
-        // Re-trigger fade-in for newly visible panels
-        panel.querySelectorAll('.fade-in').forEach(el => {
-          el.classList.remove('visible');
-          setTimeout(() => el.classList.add('visible'), 50);
-        });
-      });
-    });
-
-    // Scroll fade-in
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 
