@@ -211,6 +211,15 @@
       color: var(--gold);
     }
 
+    .cta-spacer { display: block; }
+    .cta-grid-cell {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 33%;
+      align-self: stretch;
+    }
+
     /* ─── LOCATIONS ─── */
     .locations-bar {
       background: var(--cream);
@@ -403,7 +412,9 @@
       .hero-content { padding: 40px 24px; }
       .hero-title { font-size: 36px; }
       .products-section { padding: 60px 20px; }
-      .products-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .products-grid { grid-template-columns: 1fr; gap: 24px; max-width: 320px; margin: 0 auto; }
+      .cta-spacer { display: none; }
+      .cta-grid-cell { padding-top: 0; justify-content: center; }
       .product-card h3 { font-size: 18px; }
       .steps-grid { grid-template-columns: 1fr; gap: 20px; }
       .testimonials { padding: 60px 20px; }
@@ -510,8 +521,8 @@
         <h3>Dominga</h3>
         <span class="price">180€</span>
       </div>
-      <div></div>
-      <div style="display:flex; align-items:flex-start; justify-content:center; padding-top:calc(33%); align-self:stretch;">
+      <div class="cta-spacer"></div>
+      <div class="cta-grid-cell">
         <a href="#prenota" class="btn-primary">Prenota un Appuntamento</a>
       </div>
     </div>
